@@ -1,0 +1,21 @@
+.aboutuslink-container {
+    padding: 11.3125rem 2rem 11.25rem 2rem;
+    background-image: url('@/assets/images/aboutuslinkbgmobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        @include header();
+        word-spacing: -0.106875rem;
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+
+    button {
+        @include btn1();
+
+        p {
+            margin: 0;
+        }
+    }
+}
