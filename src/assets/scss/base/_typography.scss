@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@mixin header() {
+    font-size: 3rem;
+    word-spacing: -0.075rem;
+    font-weight: 700;
+    line-height: 3rem;
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+}
+
+@mixin body() {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+}

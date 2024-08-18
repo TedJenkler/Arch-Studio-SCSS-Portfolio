@@ -1,0 +1,22 @@
+@mixin btn1 () {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5625rem 2rem 1.375rem 2.3125rem;
+    border: none;
+    background-color: $black;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    font-family: "League Spartan", sans-serif;
+
+    &:hover {
+        background-color: $hover;
+    }
+
+    &:active {
+        background-color: $active;
+    }
+}

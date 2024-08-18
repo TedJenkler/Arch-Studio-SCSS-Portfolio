@@ -1,0 +1,26 @@
+.hero {
+    padding: 7.25rem 2rem 6.875rem 2rem;
+    background-image: url('@/assets/images/herobgmobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        @include header();
+        color: white;
+        margin-bottom: 1.3125rem;
+    }
+
+    p {
+        @include body();
+        color: white;
+        margin-bottom: 5.1875rem;
+    }
+
+    button {
+        @include btn1();
+
+        p {
+            margin: 0;
+        }
+    }
+}

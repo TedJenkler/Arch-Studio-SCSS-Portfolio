@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    
+    .logo {
+        height: 2rem;
+        width: 4.8125rem;
+    }
+
+    .burger {
+        height: 1.0625rem;
+        width: 1.5rem;
+    }
+}
