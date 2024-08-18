@@ -1,0 +1,28 @@
+.featured {
+    padding: 4.5625rem 2rem 8.25rem 2rem;
+
+    .featured-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h2 {
+            @include header();
+            margin-bottom: 2.6875rem;
+        }
+        
+        .md-btn {
+            display: none;
+            position: absolute;
+        }
+    }
+
+    .sm-btn {
+        @include btn1();
+        width: 100%;
+        
+        p {
+            margin: 0;
+        }
+    }
+}

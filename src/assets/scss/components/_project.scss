@@ -1,0 +1,40 @@
+.project {
+    position: relative;
+    padding: 9.5625rem 7.5625rem 1.4375rem 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .bgfilter {
+        position: absolute; 
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent);
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    h3, 
+    a {
+        position: relative;
+        z-index: 20;
+    }
+    
+    h3 {
+        @include sm-header();
+        white-space: nowrap;
+        color: white;
+    }
+
+    a {
+        @include lg-body();
+        color: white;
+        opacity: 75%;
+    }
+}
