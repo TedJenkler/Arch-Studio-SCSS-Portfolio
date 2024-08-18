@@ -1,0 +1,50 @@
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5.8125rem 3.8125rem 3rem 3.875rem;
+    background-color: $grey;
+
+    .box {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -25%;
+        left: 50%;
+        transform: translate(-50%, 25%);
+        height: 7.5rem;
+        width: 7.5rem;
+        background-color: $black;
+
+        img {
+            height: 1.5rem;
+            width: 3.625rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        margin-bottom: 1.9375rem;
+        padding: 0;
+
+        li {
+            list-style: none;
+            @include lg-body();
+            color: $grey2;
+            font-weight: 700;
+        }
+    }
+
+    button {
+        @include btn1();
+
+        p {
+            margin: 0;
+        }
+    }
+}
