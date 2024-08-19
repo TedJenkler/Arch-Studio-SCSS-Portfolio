@@ -5,10 +5,6 @@
     background-size: cover;
     margin-bottom: 1.5rem;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
     .bgfilter {
         position: absolute; 
         top: 0;
@@ -36,5 +32,15 @@
         @include lg-body();
         color: white;
         opacity: 75%;
+    }
+}
+
+@include respond-to(md)  {
+    .project {
+        padding: 8.5625rem 20.8125rem 2.4375rem 2.5rem;
+
+        .bgfilter {
+            display: none;
+        }
     }
 }

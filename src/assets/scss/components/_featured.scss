@@ -26,3 +26,33 @@
         }
     }
 }
+
+@include respond-to(md) {
+    .featured {
+        padding: 12.5rem 0 12.5rem 0;
+
+        .featured-header {
+            margin-bottom: 5.3125rem;
+
+            h2 {
+                margin-bottom: 0;
+                @include header2();
+            }
+
+            .md-btn {
+                display: flex;
+                position: relative;
+                @include btn1();
+                
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .sm-btn {
+            display: none;
+            position: absolute;
+        }
+    }
+}

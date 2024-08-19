@@ -6,7 +6,7 @@ import Featured from '../components/Featured'
 
 function Home() {
   return (
-    <main>
+    <main className='home'>
       <Hero />
       <Section />
       <AboutUsLink />

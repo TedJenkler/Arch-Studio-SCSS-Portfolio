@@ -19,3 +19,14 @@
         }
     }
 }
+
+@include respond-to(md) {
+    .aboutuslink-container {
+        padding: 10.4375rem 4.375rem 10.5rem 3.625rem;
+
+        h2 {
+            @include header2();
+            margin-bottom: 2.5rem;
+        }
+    }
+}

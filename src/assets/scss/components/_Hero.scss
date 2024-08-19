@@ -24,3 +24,18 @@
         }
     }
 }
+
+@include respond-to(md) {
+    .hero {
+        padding: 11.625rem 3.625rem 11.1875rem 3.625rem;
+        background-image: url('@/assets/images/herobgtablet.png');
+
+        h1 {
+            margin-bottom: 1.625rem;
+        }
+
+        p {
+            margin-bottom: 2.9375rem;
+        }
+    }
+}

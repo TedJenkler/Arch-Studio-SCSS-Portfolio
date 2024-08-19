@@ -1,10 +1,12 @@
 import React from 'react';
 
-function ProjectLink({ name, img }) {
-  const imageUrl = new URL(`../assets/images/${img}`, import.meta.url).href;
+function ProjectLink({ name, img, imgMd, index }) {
+  const isMdScreen = window.innerWidth >= 768;
+  const imageUrl = new URL(`../assets/images/${isMdScreen ? imgMd : img }`, import.meta.url).href;
 
   return (
     <div 
+      key={index}
       className='project' 
       style={{ backgroundImage: `url(${imageUrl})` }}
     >

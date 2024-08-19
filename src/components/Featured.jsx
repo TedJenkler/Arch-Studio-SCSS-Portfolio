@@ -1,26 +1,38 @@
-import React from 'react'
+import React from 'react';
 import arrow from '../assets/images/arrow.svg';
 import ProjectLink from './ProjectLink';
 
 function Featured() {
+  
+  const projects = [
+    { name: "Project Del Sol", img: "project1.png", imgMd: "project1md.png" },
+    { name: "228B Tower", img: "project2.png", imgMd: "project2md.png" },
+    { name: "Le Prototype", img: "project3.png", imgMd: "project3md.png" }
+  ];
+
   return (
     <section className='featured'>
-        <div className='featured-header'>
-            <h2>Featured</h2>
-            <button className='md-btn'>
-                <p>See All</p>
-                <img src={arrow} alt='arrow'/>
-            </button>
-        </div>
-        <ProjectLink name="Project Del Sol" img="project1.png" />
-        <ProjectLink name="228B Tower" img="project2.png" />
-        <ProjectLink name="Le Prototype" img="project3.png" />
-        <button className='sm-btn'>
-            <p>See All</p>
-            <img src={arrow} alt='arrow'/>
+      <div className='featured-header'>
+        <h2>Featured</h2>
+        <button className='md-btn'>
+          <p>See All</p>
+          <img src={arrow} alt='arrow'/>
         </button>
+      </div>
+      {projects.map((project, index) => (
+        <ProjectLink 
+          key={index} 
+          name={project.name} 
+          img={project.img} 
+          imgMd={project.imgMd}
+        />
+      ))}
+      <button className='sm-btn'>
+        <p>See All</p>
+        <img src={arrow} alt='arrow'/>
+      </button>
     </section>
-  )
+  );
 }
 
-export default Featured
+export default Featured;

@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    
+
     .logo {
         height: 2rem;
         width: 4.8125rem;
@@ -12,5 +12,33 @@ nav {
     .burger {
         height: 1.0625rem;
         width: 1.5rem;
+    }
+}
+
+@include respond-to(md) {
+    nav {
+        padding: 3.5rem 11.4375rem 3.5rem 6.0625rem;
+
+        .burger {
+            display: none;
+            position: absolute;
+        }
+
+        .logo {
+            height: 2.5rem;
+            width: 6rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 3.8125rem;
+
+            li {
+                @include lg-body();
+                font-weight: 700;
+                list-style: none;
+                color: $grey2;
+            }
+        }
     }
 }

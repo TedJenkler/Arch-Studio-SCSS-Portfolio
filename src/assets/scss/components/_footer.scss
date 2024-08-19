@@ -48,3 +48,34 @@ footer {
         }
     }
 }
+
+@include respond-to(md) {
+    footer {
+        width: 79.69%;
+        padding: 3.0625rem 8.6875rem 2.875rem 10rem;
+        flex-direction: row;
+
+        .box {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+
+        ul {
+            flex-direction: row;
+            gap: 3.8125rem;
+            margin: 0;
+
+            li {
+                white-space: nowrap;
+            }
+        }
+
+        button { 
+            position: absolute;
+            top: 50%;
+            right: -9.375rem;
+            transform: translate(0, -50%);
+        }
+    }
+}
