@@ -9,6 +9,11 @@ nav {
         width: 4.8125rem;
     }
 
+    ul {
+        display: none;
+        position: absolute;
+    }
+
     .burger {
         height: 1.0625rem;
         width: 1.5rem;
@@ -31,6 +36,7 @@ nav {
 
         ul {
             display: flex;
+            position: relative;
             gap: 3.8125rem;
 
             li {

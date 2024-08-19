@@ -1,5 +1,18 @@
+.tabletdesign {
+    display: none;
+}
+
 @include respond-to(md) {
     .home {
+        position: relative;
         margin: 0 6.125rem 0 6.0625rem;
+
+        .tabletdesign {
+            position: absolute;
+            display: flex;
+            top: -10.5rem;
+            left: -2.1875rem;
+            transform: translate(-100%, 0);
+        }
     }
 }
