@@ -23,6 +23,11 @@
             margin: 0;
         }
     }
+
+    .slider {
+        display: none;
+        position: absolute;
+    }
 }
 
 @include respond-to(md) {
@@ -36,6 +41,43 @@
 
         p {
             margin-bottom: 2.9375rem;
+        }
+    }
+}
+
+@include respond-to(xl) {
+    .hero {
+        position: relative;
+        padding: 11.625rem 23.5rem 11.1875rem 11.875rem;
+        background-image: url('@/assets/images/herobgdesktop.png');
+
+        .slider {
+            display: flex;
+            bottom: -0.0625rem;
+            left: -5rem;
+            background-color: white;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 5rem;
+                width: 5rem;
+                background: white;
+                color: $grey2;
+                border: none;
+                padding: 0;
+
+                span {
+                    width: 1.0625rem;
+                    height: 1.5625rem;
+                }
+            }
+
+            #selected {
+                background-color: $black;
+                color: white;
+            }
         }
     }
 }

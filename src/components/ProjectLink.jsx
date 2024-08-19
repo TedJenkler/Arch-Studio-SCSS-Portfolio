@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-function ProjectLink({ name, img, imgMd, index }) {
-  const isMdScreen = window.innerWidth >= 768;
-  const imageUrl = new URL(`../assets/images/${isMdScreen ? imgMd : img }`, import.meta.url).href;
+function ProjectLink({ name, img, imgXl, imgMd, index }) {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMdScreen = screenWidth >= 768;
+  const isXlScreen = screenWidth >= 1140;
+  const imageUrl = new URL(`../assets/images/${isMdScreen && !isXlScreen ? imgMd : isXlScreen ? imgXl : img }`, import.meta.url).href;
 
   return (
     <div 

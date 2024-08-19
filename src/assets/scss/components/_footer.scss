@@ -74,8 +74,26 @@ footer {
         button { 
             position: absolute;
             top: 50%;
-            right: -9.375rem;
+            right: 9.375rem;
             transform: translate(0, -50%);
+        }
+    }
+}
+
+@include respond-to(xl) {
+    footer {
+        width: 61.5rem;
+        height: 12.5rem;
+        margin-right: 7.875rem;
+        justify-content: center;
+
+        .box {
+            width: 12.5rem;
+            height: 12.5rem;
+        }
+
+        button {
+            right: 7.875rem;
         }
     }
 }

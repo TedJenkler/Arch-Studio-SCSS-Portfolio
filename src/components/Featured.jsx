@@ -5,9 +5,9 @@ import ProjectLink from './ProjectLink';
 function Featured() {
   
   const projects = [
-    { name: "Project Del Sol", img: "project1.png", imgMd: "project1md.png" },
-    { name: "228B Tower", img: "project2.png", imgMd: "project2md.png" },
-    { name: "Le Prototype", img: "project3.png", imgMd: "project3md.png" }
+    { name: "Project Del Sol", img: "project1.png", imgMd: "project1md.png", imgXl: "project1xl.png" },
+    { name: "228B Tower", img: "project2.png", imgMd: "project2md.png", imgXl: "project2xl.png" },
+    { name: "Le Prototype", img: "project3.png", imgMd: "project3md.png", imgXl: "project3xl.png" }
   ];
 
   return (
@@ -19,14 +19,17 @@ function Featured() {
           <img src={arrow} alt='arrow'/>
         </button>
       </div>
+      <div className='project-container'>
       {projects.map((project, index) => (
         <ProjectLink 
           key={index} 
           name={project.name} 
           img={project.img} 
           imgMd={project.imgMd}
+          imgXl={project.imgXl}
         />
       ))}
+      </div>
       <button className='sm-btn'>
         <p>See All</p>
         <img src={arrow} alt='arrow'/>

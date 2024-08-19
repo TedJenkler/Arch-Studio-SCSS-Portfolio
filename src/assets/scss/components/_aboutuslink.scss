@@ -30,3 +30,10 @@
         }
     }
 }
+
+@include respond-to(xl) {
+    .aboutuslink-container {
+        padding: 10.4375rem 29.6875rem 10.5rem 11.875rem;
+        background-image: url('@/assets/images/aboutuslinkbgdesktop.png');
+    }
+}

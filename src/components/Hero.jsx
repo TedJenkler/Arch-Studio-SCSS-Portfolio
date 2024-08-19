@@ -10,6 +10,12 @@ function Hero() {
         <p>See Our Portfolio</p>
         <img src={arrow} alt='arrow' />
       </button>
+      <div className='slider'>
+        <button id='selected'><span>01</span></button>
+        <button><span>02</span></button>
+        <button><span>03</span></button>
+        <button><span>04</span></button>
+      </div>
     </section>
   )
 }

@@ -23,6 +23,13 @@
         @include body();
         color: $hover;
     }
+
+    .img-container {
+        img {
+            display: none;
+            position: relative;
+        }
+    }
 }
 
 @include respond-to(md) {
@@ -47,6 +54,44 @@
             @include header2();
             width: 75%;
             margin-bottom: 3.5625rem;
+        }
+    }
+}
+
+@include respond-to(xl) {
+    .section {
+        position: relative;
+        padding: 12.1875rem 0 13.1875rem 0;
+        display: flex;
+        flex-direction: row;
+        min-width: 100%;
+
+        .content {
+            width: 68.47%;
+            padding: 4.625rem 7.8125rem 0 11.8125rem;
+            z-index: 50;
+
+            h2 {
+                width: 100%;
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        .img-container {
+            width: 31.53%;
+
+            img {
+                width: 21.875rem;
+                height: 35.5rem;
+            }
+        }
+
+        .design-md {
+            position: absolute;
+            top: 13.75rem;
+            margin-bottom: 0;
+            font-size: 15.625rem;
+            z-index: 40;
         }
     }
 }

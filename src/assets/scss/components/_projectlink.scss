@@ -44,3 +44,11 @@
         }
     }
 }
+
+@include respond-to(xl) {
+    .project {
+        padding: 28.5625rem 6.875rem 2.4375rem 2.5rem;
+        min-width: 21.875rem;
+        margin-bottom: 0;
+    }
+}

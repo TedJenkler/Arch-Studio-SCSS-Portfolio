@@ -23,6 +23,7 @@ nav {
 @include respond-to(md) {
     nav {
         padding: 3.5rem 11.4375rem 3.5rem 6.0625rem;
+        width: 100%;
 
         .burger {
             display: none;
@@ -46,5 +47,14 @@ nav {
                 color: $grey2;
             }
         }
+    }
+}
+
+@include respond-to(xl) {
+    nav {
+        padding: 3.5rem 10.3125rem 3.5rem 0;
+        justify-content: flex-start;
+        gap: 5.9375rem;
+        width: 69.375rem;
     }
 }
