@@ -11,8 +11,8 @@
             position: absolute;
             display: flex;
             top: -10.5rem;
-            left: -2.1875rem;
-            transform: translate(-120%, 0);
+            left: 3.03125rem;
+            transform: translate(-50%, 0);
         }
     }
 }
@@ -21,5 +21,13 @@
     .home {
         padding: 0 10.3125rem;
         max-width: 90rem;
+        
+        .tabletdesign {
+            position: absolute;
+            display: flex;
+            top: -10.5rem;
+            left: 5.15625rem;
+            transform: translate(-75%, 0);
+        }
     }
 }

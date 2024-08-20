@@ -74,7 +74,7 @@ footer {
         button { 
             position: absolute;
             top: 50%;
-            right: 9.375rem;
+            right: -9.375rem;
             transform: translate(0, -50%);
         }
     }
@@ -93,7 +93,7 @@ footer {
         }
 
         button {
-            right: 7.875rem;
+            right: -7.875rem;
         }
     }
 }
