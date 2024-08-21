@@ -1,20 +1,31 @@
-.portfolio {
-    padding: 9.5625rem 4.75rem 1.4375rem 1.5rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 1.5rem;
+.portfoliopage {
+    padding: 0 2rem 0 2rem;  
+}
 
-    h2 {
-        @include sm-header();
-        white-space: nowrap;
-        color: white;
-        margin: 0;
+@include respond-to(md) {
+    .portfoliopage {
+        position: relative;
+        padding: 0 6.125rem 0 6.0625rem;
     }
+    .tabletdesign {
+        position: absolute;
+        display: flex;
+        top: -10.5rem;
+        left: 3.03125rem;
+        transform: translate(-50%, 0);
+    }
+}
 
-    p {
-        @include lg-body();
-        color: white;
-        opacity: 75%;
-        margin: 0;
+@include respond-to(xl) {
+    .portfoliopage {
+        position: relative;
+        padding: 0 10.3125rem;
+    }
+    .tabletdesign {
+        position: absolute;
+        display: flex;
+        top: -10.5rem;
+        left: 5.15625rem;
+        transform: translate(-75%, 0);
     }
 }

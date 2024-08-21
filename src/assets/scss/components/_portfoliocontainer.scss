@@ -1,3 +1,19 @@
 .portfolio-container {
-    padding: 3.5rem 2rem 8.25rem 2rem;
+    padding: 3.5rem 0 8.25rem 0;
+}
+
+@include respond-to(md) {
+    .portfolio-container {
+        padding: 0 0 12.5rem 0;
+    }
+}
+
+@include respond-to(xl) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(3, 21.875rem);
+        column-gap: 1.875rem;
+        row-gap: 2rem;
+        padding: 0 0 10rem 0;
+    }
 }
