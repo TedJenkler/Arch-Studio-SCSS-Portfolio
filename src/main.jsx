@@ -4,11 +4,24 @@ import Home from './pages/Home';
 import Nav from './components/Nav';
 import './assets/scss/main.scss';
 import Footer from './components/Footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Portfolio from './pages/Portfolio';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/portfolio",
+    element: <Portfolio />
+  }
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Nav />
-    <Home />
+    <RouterProvider router={router} />
     <Footer />
   </React.StrictMode>,
 )

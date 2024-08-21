@@ -16,7 +16,7 @@ function ProjectLink({ name, img, imgXl, imgMd, index }) {
   }, []);
 
   const isMdScreen = screenWidth >= 768;
-  const isXlScreen = screenWidth >= 1140;
+  const isXlScreen = screenWidth >= 1440;
   const imageUrl = new URL(`../assets/images/${isMdScreen && !isXlScreen ? imgMd : isXlScreen ? imgXl : img }`, import.meta.url).href;
 
   return (
