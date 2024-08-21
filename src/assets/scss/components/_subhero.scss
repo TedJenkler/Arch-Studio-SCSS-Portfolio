@@ -1,0 +1,24 @@
+.subhero {
+    position: relative;
+    padding: 0 0 22.8125rem 0;
+
+    div {
+        position: absolute;
+        background-color: white;
+        top: 12.1875rem;
+        padding: 4rem 0 0 2rem;
+        margin-right: 2rem;
+
+        h1 {
+            @include header();
+            margin: 0;
+            margin-bottom: 1.3125rem;
+        }
+
+        p {
+            @include body();
+            color: $hover;
+            margin: 0;
+        }
+    }
+}

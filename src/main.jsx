@@ -6,6 +6,7 @@ import './assets/scss/main.scss';
 import Footer from './components/Footer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Portfolio from './pages/Portfolio';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/portfolio",
     element: <Portfolio />
+  },
+  {
+    path: "/about",
+    element: <About />
   }
 ])
 
