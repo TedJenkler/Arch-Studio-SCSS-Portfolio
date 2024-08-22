@@ -12,3 +12,18 @@
         }
     }
 }
+
+@include respond-to(xl) {
+    .about {
+        padding: 0 10.3125rem;
+        max-width: 90rem;
+        
+        .tabletdesign {
+            position: absolute;
+            display: flex;
+            top: -10.5rem;
+            left: 5.15625rem;
+            transform: translate(-75%, 0);
+        }
+    }
+}

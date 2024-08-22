@@ -72,3 +72,40 @@
         }
     }
 }
+
+@include respond-to(xl) {
+    .subhero {
+        width: 1110px;
+        height: 720px;
+
+        img {
+            width: 635px;
+            height: 720px;
+        }
+
+        .sub-headermd {
+            font-size: 15.625rem;
+            line-height: 12.5rem;
+            word-spacing: -0.3125rem;
+            top: 8.125rem;
+        }
+
+        div {
+            top: 13.5625rem;
+            left: 30.125rem;
+            padding: 10rem 0 0 11.375rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .hero- {
+                position: static;
+                margin-bottom: 3.5625rem;
+            }
+
+            h1 {
+                margin-bottom: 3.5625rem;
+            }
+        }
+    }
+}
