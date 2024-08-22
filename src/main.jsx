@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />
+  },
+  {
+    path: "/contact",
+    element: <Contact />
   }
 ])
 

@@ -20,6 +20,10 @@
             color: $hover;
             margin: 0;
         }
+
+        .hero- {
+            display: none;
+        }
     }
 }
 
@@ -57,6 +61,7 @@
            
             .hero- {
                 position: relative;
+                display: flex;
                 left: 0;
                 width: 4.0625rem;
                 height: 0.0625rem;
