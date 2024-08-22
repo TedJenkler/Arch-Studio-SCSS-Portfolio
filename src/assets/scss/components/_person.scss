@@ -18,3 +18,9 @@
         }
     }
 }
+
+@include respond-to(md) {
+    .person {
+        margin-bottom: 6.4375rem;
+    }
+}

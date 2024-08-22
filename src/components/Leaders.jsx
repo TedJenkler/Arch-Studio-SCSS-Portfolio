@@ -9,10 +9,12 @@ function Leaders() {
   return (
     <section className='leaders'>
         <h2>The Leaders</h2>
-        <Person img={jake} h2="Jake Richards" p="Chief Architect" />
-        <Person img={thompson} h2="Thompson Smith" p="Head of Finance" />
-        <Person img={jackson} h2="Jackson Rourke" p="Lead Designer" />
-        <Person img={maria} h2="Maria Simpson" p="Senior Architect" />
+        <div>
+          <Person img={jake} h2="Jake Richards" p="Chief Architect" />
+          <Person img={thompson} h2="Thompson Smith" p="Head of Finance" />
+          <Person img={jackson} h2="Jackson Rourke" p="Lead Designer" />
+          <Person img={maria} h2="Maria Simpson" p="Senior Architect" />
+        </div>
     </section>
   )
 }

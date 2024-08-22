@@ -7,3 +7,24 @@
         margin-bottom: 4.3125rem;
     }
 }
+
+@include respond-to(md) {
+    .leaders {
+        padding: 0 0 14.9375rem 0;
+
+        h2 {
+            margin-bottom: 3.875rem;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 17.5rem 17.5rem;
+            column-gap: 0.6875rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

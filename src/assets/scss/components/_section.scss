@@ -14,8 +14,8 @@
     }
 
     h2 {
-        @include header2();
         word-spacing: -0.106875rem;
+        @include header2();
         margin-bottom: 1.375rem;
     }
 
