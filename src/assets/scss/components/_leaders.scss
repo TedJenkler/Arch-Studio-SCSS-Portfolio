@@ -28,3 +28,19 @@
         }
     }
 }
+
+@include respond-to(xl) {
+    .leaders {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 9.9375rem;
+
+        .leader-h2 {
+            width: 25%;
+        }
+
+        div {
+            column-gap: 1.875rem;
+        }
+    }
+}

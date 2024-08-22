@@ -8,7 +8,7 @@ import maria from '../assets/images/maria.png';
 function Leaders() {
   return (
     <section className='leaders'>
-        <h2>The Leaders</h2>
+        <h2 className='leader-h2'>The Leaders</h2>
         <div>
           <Person img={jake} h2="Jake Richards" p="Chief Architect" />
           <Person img={thompson} h2="Thompson Smith" p="Head of Finance" />

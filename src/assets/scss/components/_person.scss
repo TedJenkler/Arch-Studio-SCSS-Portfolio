@@ -24,3 +24,9 @@
         margin-bottom: 6.4375rem;
     }
 }
+
+@include respond-to(xl) {
+    .person {
+        margin-bottom: 3.9375rem;
+    }
+}

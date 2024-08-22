@@ -19,6 +19,11 @@
         color: $hover;
         margin: 0;
     }
+
+    .section2-img {
+        display: none;
+        position: absolute;
+    }
 }
 
 @include respond-to(md) {
@@ -32,6 +37,34 @@
         h2 {
             margin-bottom: 4.0625rem;
             width: 50%;
+        }
+    }
+}
+
+@include respond-to(xl) {
+    .section2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 7.75rem;
+        padding: 12.5rem 0 13.125rem 0;
+
+        div {
+            width: 40.18%;
+
+            .design- {
+                margin-bottom: 5.125rem;
+            }
+
+            h2 {
+                margin-bottom: 3.5625rem;
+            }
+        }
+
+        .section2-img {
+            display: flex;
+            position: relative;
+            width: 48.65%;
+            height: 100%;
         }
     }
 }
