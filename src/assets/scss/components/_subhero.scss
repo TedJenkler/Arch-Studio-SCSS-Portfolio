@@ -22,3 +22,53 @@
         }
     }
 }
+
+@include respond-to(md) {
+    .subhero {
+        padding: 0;
+        width: 35.8125rem;
+        height: 45rem;
+
+        img {
+            width: 35.8125rem;
+            height: 45rem;
+        }
+
+        .sub-headermd {
+            position: absolute;
+            font-size: 7.5rem;
+            line-height: 12.5rem;
+            font-weight: 700;
+            word-spacing: -0.1875rem;
+            top: 28%;
+            right: 0;
+            color: $grey;
+            margin: 0;
+            z-index: 50;
+        }
+
+        div {
+            top: auto;
+            bottom: -0.125rem;
+            left: 3.625rem;
+            right: -0.0625rem;
+            margin-right: 0;
+            padding: 5.5rem 0 0 3.75rem;
+           
+            .hero- {
+                position: relative;
+                left: 0;
+                width: 4.0625rem;
+                height: 0.0625rem;
+                background-color: $active;
+                padding: 0;
+                margin-bottom: 4.5625rem;
+            }
+
+            h1 {
+                @include header2();
+                margin-bottom: 2.5625rem;
+            }
+        }
+    }
+}

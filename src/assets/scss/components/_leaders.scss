@@ -1,0 +1,9 @@
+.leaders {
+    padding: 0 2rem 10.6875rem 2rem;
+
+    h2 {
+        @include header2();
+        margin: 0;
+        margin-bottom: 4.3125rem;
+    }
+}

@@ -1,0 +1,22 @@
+.section2 {
+    padding: 0 2rem 7rem 2rem;
+
+    .design- {
+        width: 4.0625rem;
+        height: 0.0625rem;
+        background-color: $active;
+        margin-bottom: 4.3125rem;
+    }
+
+    h2 {
+        @include header2();
+        margin: 0;
+        margin-bottom: 2.1875rem;
+    }
+
+    p {
+        @include body();
+        color: $hover;
+        margin: 0;
+    }
+}

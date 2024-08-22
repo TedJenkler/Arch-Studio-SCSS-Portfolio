@@ -1,13 +1,33 @@
 import React from 'react'
-import subhero1 from "../assets/images/subhero1.png";
+import { useState, useEffect } from 'react';
 
-function SubHero() {
+function SubHero({ img, imgmd, imgxl, h1, p }) {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMdScreen = screenWidth >= 768;
+  const isXlScreen = screenWidth >= 1440;
+
   return (
     <section className='subhero'>
-      <img src={subhero1} alt='subhero' />
+      <img src={isMdScreen ? imgmd : img} alt='subhero' />
+      <h1 className='sub-headermd'>About</h1>
       <div>
-        <h1>Your team of professionals</h1>
-        <p>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
+        <div className='hero-'></div>
+        <h1>{h1}</h1>
+        <p>{p}</p>
       </div>
     </section>
   )

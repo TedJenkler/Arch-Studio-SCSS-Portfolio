@@ -1,0 +1,20 @@
+.person {
+    margin-bottom: 4.9375rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    div {
+        padding-top: 0.9375rem;
+
+        h2 {
+            @include sm-header();
+        }
+
+        p {
+            @include body();
+            opacity: 75%;
+        }
+    }
+}
