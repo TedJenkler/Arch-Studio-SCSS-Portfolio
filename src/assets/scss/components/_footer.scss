@@ -32,17 +32,17 @@ footer {
         margin-bottom: 1.9375rem;
         padding: 0;
 
-        li {
-            list-style: none;
+        a {
+            text-decoration: none;
             @include lg-body();
             color: $grey2;
             font-weight: 700;
         }
     }
 
-    button {
+    .button {
         @include btn1();
-
+        text-decoration: none;
         p {
             margin: 0;
         }
@@ -65,13 +65,9 @@ footer {
             flex-direction: row;
             gap: 3.8125rem;
             margin: 0;
-
-            li {
-                white-space: nowrap;
-            }
         }
 
-        button { 
+        .button { 
             position: absolute;
             top: 50%;
             right: -9.375rem;
@@ -92,7 +88,7 @@ footer {
             height: 12.5rem;
         }
 
-        button {
+        .button {
             right: -7.875rem;
         }
     }

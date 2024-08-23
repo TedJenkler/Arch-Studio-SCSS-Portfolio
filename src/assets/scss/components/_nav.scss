@@ -40,11 +40,12 @@ nav {
             position: relative;
             gap: 3.8125rem;
 
-            li {
+            a {
                 @include lg-body();
                 font-weight: 700;
-                list-style: none;
+                text-decoration: none;
                 color: $grey2;
+                cursor: pointer;
             }
         }
     }
