@@ -20,6 +20,34 @@ nav {
     }
 }
 
+.mobilemenu {
+    position: absolute;
+    width: 91.47%;
+    top: 6.3125rem;
+    right: 0;
+    background-color: $grey;
+    padding: 2.4375rem 3rem 2.625rem 3rem;
+    z-index: 100;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+            line-height: 2.5rem;
+            color: $black;
+            font-weight: 700;
+            font-family: "League Spartan", sans-serif;
+            margin-bottom: 1.0625rem;
+        }
+    }
+}
+
 @include respond-to(md) {
     nav {
         padding: 3.5rem 11.4375rem 3.5rem 6.0625rem;
