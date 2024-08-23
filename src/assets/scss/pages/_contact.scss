@@ -1,0 +1,29 @@
+@include respond-to(md) {
+    .contact {
+        position: relative;
+        padding: 0 6.125rem 0 6.0625rem;
+
+        .tabletdesign {
+            position: absolute;
+            display: flex;
+            top: -10.5rem;
+            left: 3.03125rem;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+@include respond-to(xl) {
+    .contact {
+        padding: 0 10.3125rem;
+        max-width: 90rem;
+        
+        .tabletdesign {
+            position: absolute;
+            display: flex;
+            top: -10.5rem;
+            left: 5.15625rem;
+            transform: translate(-75%, 0);
+        }
+    }
+}

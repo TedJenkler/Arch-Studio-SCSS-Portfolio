@@ -8,10 +8,10 @@
         margin-bottom: 3.5625rem;
     }
 
-    div {
+    .form-fields {
         margin-bottom: 2.6875rem;
 
-        input {
+        input, textarea {
             padding: 0 0 1.3125rem 2.1875rem;
             font-size: 1.25rem;
             font-weight: 700;
@@ -19,7 +19,6 @@
             font-family: "League Spartan", sans-serif;
             color: $active;
             width: 100%;
-            height: 2.75rem;
             border: none;
             border-bottom: 0.0625rem solid $black;
             outline: none;
@@ -34,29 +33,21 @@
         }
 
         textarea {
-            padding: 0 0 1.3125rem 2.1875rem;
-            font-size: 1.25rem;
-            font-weight: 700;
-            word-spacing: -0.03125rem;
-            font-family: "League Spartan", sans-serif;
-            color: $active;
-            width: 100%;
-            border: none;
-            border-bottom: 0.0625rem solid $black;
-            outline: none;
             resize: none;
-
-            &::placeholder {
-                font-size: 1.25rem;
-                font-weight: 700;
-                word-spacing: -0.03125rem;
-                font-family: "League Spartan", sans-serif;
-                color: $active;
-            }
         }
     }
 
-    button {
+    .form-field {
+        margin-bottom: 2.6875rem;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    .submit-button {
         position: absolute;
         bottom: 8.75rem;
         right: 2rem;
@@ -70,6 +61,42 @@
         img {
             height: 1.125rem;
             width: 1.5rem;
+        }
+    }
+}
+
+@include respond-to(md) {
+    .contact-form {
+        padding: 4.5625rem 0 8.25rem 0;
+
+        h2 {
+            width: 100%;
+        }
+
+        .submit-button {
+            right: 0;
+        }
+    }
+}
+
+@include respond-to(xl) {
+    .contact-form {
+        display: flex;
+        padding: 0 0 15rem 0;
+        justify-content: space-between;
+
+        h2 {
+            width: 31.53%;
+            margin: 0;
+        }
+
+        .form-fields {
+            width: 65.77%;
+            margin: 0;
+        }
+
+        .submit-button {
+            transform: translate(0, -85%);
         }
     }
 }

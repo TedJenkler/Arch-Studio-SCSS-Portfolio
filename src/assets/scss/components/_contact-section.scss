@@ -1,5 +1,5 @@
 .contact-section {
-    .design-  {
+    .design- {
         height: 0.0625rem;
         width: 4.0625rem;
         background-color: $active;
@@ -13,9 +13,10 @@
         padding: 0 2rem;
     }
 
-    .info {
+    .office-info {
         padding: 0 2rem;
         margin-bottom: 2.5rem;
+
         h3 {
             font-size: 1.125rem;
             line-height: 2.1875rem;
@@ -32,24 +33,85 @@
             color: $hover;
         }
 
-        button {
+        .office-details {
             display: flex;
-            justify-content: space-between;
-            background-color: transparent;
-            width: 9.4375rem;
-            height: 1.5625rem;
-            border: none;
-            margin-top: 2.6875rem;
-            p {
-                @include body();
-                font-weight: 700;
-                color: black;
+            flex-direction: column;
+
+            button {
+                display: flex;
+                justify-content: space-between;
+                background-color: transparent;
+                width: 9.4375rem;
+                height: 1.5625rem;
+                border: none;
+                margin-top: 2.6875rem;
+
+                p {
+                    @include body();
+                    font-weight: 700;
+                    color: black;
+                }
             }
         }
     }
-    .map {
+
+    .map-image {
         margin-top: 4.4375rem;
         width: 100%;
         height: 22.9375rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include respond-to(md) {
+        padding: 12.625rem 0 12.4375rem 0;
+
+        .design- {
+            margin-bottom: 3.0625rem;
+        }
+
+        h2 {
+            width: 50%;
+            margin-bottom: 3.6875rem;
+        }
+
+        .office-info {
+            .office-details {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .map-image {
+            margin-top: 14.125rem;
+            height: 35rem;
+        }
+    }
+
+    @include respond-to(xl) {
+        padding: 12.5rem 0 9.9375rem 0;
+
+        .contact-details-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                width: 33%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .office-info {
+                width: 33%;
+                padding: 0;
+
+                .office-details {
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
