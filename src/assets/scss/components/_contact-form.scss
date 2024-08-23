@@ -1,0 +1,75 @@
+.contact-form {
+    position: relative;
+    padding: 4.5625rem 2rem 8.25rem 2rem;
+
+    h2 {
+        @include header2();
+        width: 50%;
+        margin-bottom: 3.5625rem;
+    }
+
+    div {
+        margin-bottom: 2.6875rem;
+
+        input {
+            padding: 0 0 1.3125rem 2.1875rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            word-spacing: -0.03125rem;
+            font-family: "League Spartan", sans-serif;
+            color: $active;
+            width: 100%;
+            height: 2.75rem;
+            border: none;
+            border-bottom: 0.0625rem solid $black;
+            outline: none;
+
+            &::placeholder {
+                font-size: 1.25rem;
+                font-weight: 700;
+                word-spacing: -0.03125rem;
+                font-family: "League Spartan", sans-serif;
+                color: $active;
+            }
+        }
+
+        textarea {
+            padding: 0 0 1.3125rem 2.1875rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            word-spacing: -0.03125rem;
+            font-family: "League Spartan", sans-serif;
+            color: $active;
+            width: 100%;
+            border: none;
+            border-bottom: 0.0625rem solid $black;
+            outline: none;
+            resize: none;
+
+            &::placeholder {
+                font-size: 1.25rem;
+                font-weight: 700;
+                word-spacing: -0.03125rem;
+                font-family: "League Spartan", sans-serif;
+                color: $active;
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        bottom: 8.75rem;
+        right: 2rem;
+        transform: translate(0, 50%);
+        @include btn1();
+        padding: 0;
+        margin: 0;
+        height: 5rem;
+        width: 5rem;
+
+        img {
+            height: 1.125rem;
+            width: 1.5rem;
+        }
+    }
+}
