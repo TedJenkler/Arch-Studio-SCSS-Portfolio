@@ -16,8 +16,12 @@
         margin-bottom: 5.1875rem;
     }
 
-    button {
+    a {
         @include btn1();
+        display: flex;
+        max-width: 15.75rem;
+        max-height: 4.5rem;
+        text-decoration: none;
 
         p {
             margin: 0;
@@ -57,7 +61,7 @@
             left: -5rem;
             background-color: white;
 
-            button {
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;

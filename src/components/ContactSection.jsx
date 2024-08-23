@@ -1,6 +1,7 @@
 import React from 'react';
 import arrow from '../assets/images/arrow2.png';
 import map from '../assets/images/mapmd.png';
+import LeafletMap from './LeafletMap';
 
 function ContactSection() {
   return (
@@ -42,7 +43,7 @@ function ContactSection() {
       </div>
       
       <div className='map-image'>
-        <img src={map} alt='map' />
+        <LeafletMap />
       </div>
     </section>
   );

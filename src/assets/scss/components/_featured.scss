@@ -20,6 +20,7 @@
     .sm-btn {
         @include btn1();
         width: 100%;
+        text-decoration: none;
         
         p {
             margin: 0;
@@ -62,6 +63,7 @@
         .featured-header {
             margin-bottom: 4rem;
         }
+
         .project-container {
             display: flex;
             justify-content: space-between;

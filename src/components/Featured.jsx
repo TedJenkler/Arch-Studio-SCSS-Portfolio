@@ -1,6 +1,7 @@
 import React from 'react';
 import arrow from '../assets/images/arrow.svg';
 import ProjectLink from './ProjectLink';
+import { Link } from 'react-router-dom';
 
 function Featured() {
   
@@ -30,10 +31,10 @@ function Featured() {
         />
       ))}
       </div>
-      <button className='sm-btn'>
+      <Link to="/portfolio" className='sm-btn'>
         <p>See All</p>
         <img src={arrow} alt='arrow'/>
-      </button>
+      </Link>
     </section>
   );
 }

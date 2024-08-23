@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ProjectLink({ name, img, imgXl, imgMd, index }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,7 +23,8 @@ function ProjectLink({ name, img, imgXl, imgMd, index }) {
   const imageUrl = new URL(`../assets/images/${isMdScreen && !isXlScreen ? imgMd : isXlScreen ? imgXl : img }`, import.meta.url).href;
 
   return (
-    <div 
+    <div
+      onClick={() => navigate('/portfolio')} 
       key={index}
       className='project' 
       style={{ backgroundImage: `url(${imageUrl})` }}

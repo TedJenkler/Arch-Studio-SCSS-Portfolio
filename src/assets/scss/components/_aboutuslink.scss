@@ -11,11 +11,15 @@
         margin-bottom: 1.5rem;
     }
 
-    button {
+    a {
         @include btn1();
+        max-width: 11.6875rem;
+        max-height: 4.5rem;
+        text-decoration: none;
 
         p {
             margin: 0;
+            white-space: nowrap;
         }
     }
 }

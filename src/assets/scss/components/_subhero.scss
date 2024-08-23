@@ -1,6 +1,6 @@
 .subhero {
     position: relative;
-    padding: 0 0 22.8125rem 0;
+    padding: 0 0 18.3125rem 0;
 
     div {
         position: absolute;
@@ -58,7 +58,7 @@
             right: -0.0625rem;
             margin-right: 0;
             padding: 5.5rem 0 0 3.75rem;
-           
+
             .hero- {
                 position: relative;
                 display: flex;
@@ -80,12 +80,12 @@
 
 @include respond-to(xl) {
     .subhero {
-        width: 1110px;
-        height: 720px;
+        width: 69.375rem;
+        height: 45rem;
 
         img {
-            width: 635px;
-            height: 720px;
+            width: 39.6875rem;
+            height: 45rem;
         }
 
         .sub-headermd {
