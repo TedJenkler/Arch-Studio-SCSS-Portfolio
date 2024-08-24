@@ -87,9 +87,9 @@ footer {
 
 @include respond-to(xl) {
     footer {
-        width: 61.5rem;
+        width: 69.375rem;
+        margin: 0 10.3125rem;
         height: 12.5rem;
-        margin-right: 7.875rem;
         justify-content: center;
 
         .box {
