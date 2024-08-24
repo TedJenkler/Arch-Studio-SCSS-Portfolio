@@ -22,7 +22,7 @@
         max-width: 15.75rem;
         max-height: 4.5rem;
         text-decoration: none;
-
+        
         p {
             margin: 0;
         }
@@ -73,6 +73,11 @@
                 color: $grey2;
                 border: none;
                 padding: 0;
+            
+                &:hover {
+                    background-color: $grey;
+                    color: $grey2;
+                }
 
                 span {
                     width: 1.0625rem;

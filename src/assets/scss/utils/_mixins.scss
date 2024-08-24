@@ -16,7 +16,7 @@
         background-color: $hover;
     }
 
-    &:active {
+    &:focus {
         background-color: $active;
     }
 }

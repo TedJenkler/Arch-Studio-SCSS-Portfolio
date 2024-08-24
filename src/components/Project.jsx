@@ -25,6 +25,7 @@ function Project({ img, imgmd, imgxl, name, year, month }) {
 
   return (
     <div className='portfolio' style={{ backgroundImage: `url(${imageUrl})` }}>
+      <div className='overlay'></div>
       <h2>{name}</h2>
       <p>{month} {year}</p>
     </div>

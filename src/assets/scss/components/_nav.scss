@@ -75,6 +75,10 @@ nav {
                 text-decoration: none;
                 color: $grey2;
                 cursor: pointer;
+
+                &:hover {
+                    color: $black;
+                }
             }
         }
     }

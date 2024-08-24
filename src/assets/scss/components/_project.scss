@@ -1,11 +1,25 @@
 .portfolio {
+    position: relative;
     padding: 9.5625rem 4.75rem 1.4375rem 1.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        .overlay {
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+        }
+    }
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    h2,
+    p {
+        position: relative;
+        z-index: 20;
     }
 
     h2 {
@@ -18,8 +32,19 @@
     p {
         @include lg-body();
         color: white;
-        opacity: 75%;
+        opacity: 0.75;
         margin: 0;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        pointer-events: none;
+        z-index: 10;
     }
 }
 
