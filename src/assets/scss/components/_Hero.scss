@@ -8,12 +8,18 @@
         @include header();
         color: white;
         margin-bottom: 1.3125rem;
+        @include respond-to(sm) {
+            max-width: 50%;
+        }
     }
 
     p {
         @include body();
         color: white;
         margin-bottom: 5.1875rem;
+        @include respond-to(sm) {
+            max-width: 19.4375rem;
+        }
     }
 
     a {
@@ -73,7 +79,7 @@
                 color: $grey2;
                 border: none;
                 padding: 0;
-            
+
                 &:hover {
                     background-color: $grey;
                     color: $grey2;
