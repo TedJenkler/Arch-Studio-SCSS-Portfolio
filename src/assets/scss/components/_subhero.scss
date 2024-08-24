@@ -13,18 +13,12 @@
             @include header();
             margin: 0;
             margin-bottom: 1.3125rem;
-            @include respond-to(sm) {
-                max-width: 75%;
-            }
         }
 
         p {
             @include body();
             color: $hover;
             margin: 0;
-            @include respond-to(sm) {
-                max-width: 19.4375rem;
-            }
         }
 
         .hero- {
