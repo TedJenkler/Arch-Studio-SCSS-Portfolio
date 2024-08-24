@@ -61,11 +61,10 @@
 
         .error-message {
             position: absolute;
-            top: 50%;
-            transform: translate(0, -100%);
+            top: 0;
             right: 16px;
             color: red;
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 700;
             word-spacing: -0.28px;
             font-family: "League Spartan", sans-serif;
@@ -118,6 +117,10 @@
         .form-fields {
             width: 65.77%;
             margin: 0;
+
+            .error-message {
+                font-size: 18px;
+            }
         }
 
         .submit-button {

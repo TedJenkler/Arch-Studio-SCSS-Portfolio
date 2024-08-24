@@ -32,7 +32,7 @@ function ContactForm() {
         <div className='form-fields'>
           <FormInput name="name" type="text" placeholder="Name" />
           <FormInput name="email" type="email" placeholder="Email" />
-          <FormInput name="message" as="textarea" placeholder="Message" />
+          <FormInput className="textarea" name="message" as="textarea" placeholder="Message" />
           <button type='submit' className='submit-button' aria-label='Submit contact form'>
             <img src={arrow} alt='Submit arrow' />
           </button>
