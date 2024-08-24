@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import burger from '../assets/images/burger.svg';
 import logo from '../assets/images/logo.svg';
-import { NavLink } from 'react-router-dom';
 
-function Nav() {
-  const [menu, setMenu] = useState(false);
-
+function Nav({ menu, setMenu }) {
   return (
     <>
       <nav aria-label="Main Navigation">
@@ -38,27 +37,37 @@ function Nav() {
           aria-controls="mobile-menu"
         />
       </nav>
-      {menu && (
-        <div className='mobilemenu' id="mobile-menu" aria-label="Mobile Navigation">
-          <ul className='nav-list'>
-            <li>
-              <NavLink to="/portfolio" onClick={() => setMenu(false)}>
-                Portfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" onClick={() => setMenu(false)}>
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" onClick={() => setMenu(false)}>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      )}
+      <AnimatePresence>
+        {menu && (
+          <motion.div
+            className='mobilemenu'
+            id="mobile-menu"
+            aria-label="Mobile Navigation"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className='nav-list'>
+              <li>
+                <NavLink to="/portfolio" onClick={() => setMenu(false)}>
+                  Portfolio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" onClick={() => setMenu(false)}>
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" onClick={() => setMenu(false)}>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
