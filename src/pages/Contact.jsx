@@ -4,7 +4,7 @@ import contact from '../assets/images/contact.png';
 import contactmd from '../assets/images/contact-md.png';
 import ContactSection from '../components/ContactSection';
 import ContactForm from '../components/ContactForm';
-import tabletdesign from '../assets/images/tabletdesign.png'
+import tabletdesign from '../assets/images/contactdesign.png';
 
 function Contact() {
   return (

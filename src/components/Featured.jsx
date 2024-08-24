@@ -15,10 +15,10 @@ function Featured() {
     <section className='featured'>
       <div className='featured-header'>
         <h2>Featured</h2>
-        <button className='md-btn'>
+        <Link to="/portfolio" className='md-btn'>
           <p>See All</p>
           <img src={arrow} alt='arrow'/>
-        </button>
+        </Link>
       </div>
       <div className='project-container'>
       {projects.map((project, index) => (

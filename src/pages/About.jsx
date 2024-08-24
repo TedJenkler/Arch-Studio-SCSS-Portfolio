@@ -1,8 +1,8 @@
 import React from 'react'
 import SubHero from '../components/SubHero'
 import Section2 from '../components/Section2'
-import Leaders from '../components/Leaders'
-import tabletdesign from '../assets/images/tabletdesign.png'
+import Leaders from '../components/Leaders';
+import tabletdesign from '../assets/images/about.png';
 import subhero1 from "../assets/images/subhero1.png";
 import subhero1md from "../assets/images/subhero1md.png";
 

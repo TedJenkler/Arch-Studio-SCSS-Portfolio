@@ -43,6 +43,7 @@ footer {
     .button {
         @include btn1();
         text-decoration: none;
+
         p {
             margin: 0;
         }
@@ -52,6 +53,7 @@ footer {
 @include respond-to(md) {
     footer {
         width: 79.69%;
+        height: 7.5rem;
         padding: 3.0625rem 8.6875rem 2.875rem 10rem;
         flex-direction: row;
 
@@ -65,6 +67,9 @@ footer {
             flex-direction: row;
             gap: 3.8125rem;
             margin: 0;
+            a {
+                white-space: nowrap;
+            }
         }
 
         .button { 
