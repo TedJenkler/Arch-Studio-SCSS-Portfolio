@@ -1,7 +1,8 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import arrow from '../assets/images/arrow.svg';
+import FormInput from './FormInput'; // Adjust the import path as necessary
 
 function ContactForm() {
   const initialValues = {
@@ -11,9 +12,9 @@ function ContactForm() {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email address').required('Required'),
-    message: Yup.string().required('Required')
+    name: Yup.string().required('Can’t be empty'),
+    email: Yup.string().email('Invalid email address').required('Can’t be empty'),
+    message: Yup.string().required('Can’t be empty')
   });
 
   const onSubmit = (values) => {
@@ -29,18 +30,9 @@ function ContactForm() {
       <Form className='contact-form'>
         <h2>Connect with us</h2>
         <div className='form-fields'>
-          <div className='form-field'>
-            <Field type="text" id="name" name="name" placeholder="Name" />
-            <ErrorMessage name='name' component="div" className='error-message' />
-          </div>
-          <div className='form-field'>
-            <Field type="email" id="email" name="email" placeholder="Email" />
-            <ErrorMessage name='email' component="div" className='error-message' />
-          </div>
-          <div className='form-field'>
-            <Field as="textarea" id="message" name="message" placeholder="Message" />
-            <ErrorMessage name='message' component="div" className='error-message' />
-          </div>
+          <FormInput name="name" type="text" placeholder="Name" />
+          <FormInput name="email" type="email" placeholder="Email" />
+          <FormInput name="message" as="textarea" placeholder="Message" />
           <button type='submit' className='submit-button'>
             <img src={arrow} alt='arrow' />
           </button>

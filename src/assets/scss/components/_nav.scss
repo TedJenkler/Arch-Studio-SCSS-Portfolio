@@ -1,94 +1,100 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
 
-    .logo {
-        height: 2rem;
-        width: 4.8125rem;
-    }
+  .logo {
+    height: 2rem;
+    width: 4.8125rem;
+  }
 
-    ul {
-        display: none;
-        position: absolute;
-        list-style: none;
-    }
+  ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+  }
 
-    .burger {
-        height: 1.0625rem;
-        width: 1.5rem;
-    }
+  .burger {
+    height: 1.0625rem;
+    width: 1.5rem;
+  }
 }
 
 .mobilemenu {
-    position: absolute;
-    width: 91.47%;
-    top: 6.3125rem;
-    right: 0;
-    background-color: $grey;
-    padding: 2.4375rem 3rem 2.625rem 3rem;
-    z-index: 100;
+  position: absolute;
+  width: 91.47%;
+  top: 6.3125rem;
+  right: 0;
+  background-color: $grey;
+  padding: 2.4375rem 3rem 2.625rem 3rem;
+  z-index: 100;
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        a {
-            text-decoration: none;
-            font-size: 2rem;
-            line-height: 2.5rem;
-            color: $black;
-            font-weight: 700;
-            font-family: "League Spartan", sans-serif;
-            margin-bottom: 1.0625rem;
-        }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: $black;
+      font-weight: 700;
+      font-family: "League Spartan", sans-serif;
+      margin-bottom: 1.0625rem;
     }
+  }
 }
 
 @include respond-to(md) {
-    nav {
-        padding: 3.5rem 11.4375rem 3.5rem 6.0625rem;
-        width: 100%;
+  nav {
+    padding: 3.5rem 11.4375rem 3.5rem 6.0625rem;
+    width: 100%;
 
-        .burger {
-            display: none;
-            position: absolute;
-        }
-
-        .logo {
-            height: 2.5rem;
-            width: 6rem;
-        }
-
-        ul {
-            display: flex;
-            position: relative;
-            gap: 3.8125rem;
-
-            a {
-                @include lg-body();
-                font-weight: 700;
-                text-decoration: none;
-                color: $grey2;
-                cursor: pointer;
-
-                &:hover {
-                    color: $black;
-                }
-            }
-        }
+    .burger {
+      display: none;
+      position: absolute;
     }
+
+    .logo {
+      height: 2.5rem;
+      width: 6rem;
+    }
+
+    ul {
+      display: flex;
+      position: relative;
+      gap: 3.8125rem;
+
+      .active-link {
+        border-bottom: 1px solid $black;
+        padding-bottom: 0.375rem;
+      }
+
+      a {
+        @include lg-body();
+        font-weight: 700;
+        text-decoration: none;
+        color: $grey2;
+        cursor: pointer;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
 }
 
 @include respond-to(xl) {
-    nav {
-        padding: 3.5rem 10.3125rem 3.5rem 0;
-        justify-content: flex-start;
-        gap: 5.9375rem;
-        width: 69.375rem;
-    }
+  nav {
+    padding: 3.5rem 10.3125rem 3.5rem 0;
+    justify-content: flex-start;
+    gap: 5.9375rem;
+    width: 69.375rem;
+  }
 }

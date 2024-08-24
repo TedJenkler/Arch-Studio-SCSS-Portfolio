@@ -46,6 +46,10 @@
                 border: none;
                 margin-top: 1.6875rem;
 
+                &:hover {
+                    text-decoration: underline
+                }
+
                 p {
                     @include body();
                     font-weight: 700;

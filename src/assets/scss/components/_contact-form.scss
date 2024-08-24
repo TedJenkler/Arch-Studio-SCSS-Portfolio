@@ -30,6 +30,24 @@
                 font-family: "League Spartan", sans-serif;
                 color: $active;
             }
+
+            &:focus {
+                color: $black;
+                border-bottom: 0.1875rem solid $black;
+
+                &::placeholder {
+                    color: $black;
+                }
+            }
+
+            &.error {
+                border-bottom-color: red;
+                color: red;
+
+                &::placeholder {
+                    color: red;
+                }
+            }
         }
 
         textarea {
@@ -38,13 +56,20 @@
     }
 
     .form-field {
+        position: relative;
         margin-bottom: 2.6875rem;
-    }
 
-    .error-message {
-        color: red;
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
+        .error-message {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -150%);
+            right: 16px;
+            color: red;
+            font-size: 18px;
+            font-weight: 700;
+            word-spacing: -0.28px;
+            font-family: "League Spartan", sans-serif;
+        }
     }
 
     .submit-button {
