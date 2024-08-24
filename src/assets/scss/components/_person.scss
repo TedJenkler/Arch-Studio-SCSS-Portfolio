@@ -2,6 +2,10 @@
     position: relative;
     margin-bottom: 4.9375rem;
 
+    img {
+        max-width: 100%;
+    }
+
     &:hover {
         .social {
             display: flex;

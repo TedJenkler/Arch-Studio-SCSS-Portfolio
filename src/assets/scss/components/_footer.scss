@@ -47,6 +47,7 @@ footer {
     .button {
         @include btn1();
         text-decoration: none;
+        white-space: nowrap;
 
         p {
             margin: 0;

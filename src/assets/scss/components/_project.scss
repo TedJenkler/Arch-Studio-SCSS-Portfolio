@@ -1,6 +1,6 @@
 .portfolio {
     position: relative;
-    padding: 9.5625rem 4.75rem 1.4375rem 1.5rem;
+    padding: 9.5625rem 1.5rem 1.4375rem 1.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 1.5rem;
@@ -20,6 +20,8 @@
     p {
         position: relative;
         z-index: 20;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     h2 {
