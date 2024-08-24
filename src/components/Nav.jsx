@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import burger from "../assets/images/burger.svg";
-import logo from "../assets/images/logo.svg";
+import burger from '../assets/images/burger.svg';
+import logo from '../assets/images/logo.svg';
 import { NavLink } from 'react-router-dom';
 
 function Nav() {
@@ -8,11 +8,11 @@ function Nav() {
 
   return (
     <>
-      <nav>
+      <nav aria-label="Main Navigation">
         <NavLink to="/">
-          <img className='logo' src={logo} alt='logo' />
+          <img className='logo' src={logo} alt='Company Logo' />
         </NavLink>
-        <ul>
+        <ul className='nav-list'>
           <li>
             <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active-link' : '')}>
               Portfolio
@@ -29,14 +29,33 @@ function Nav() {
             </NavLink>
           </li>
         </ul>
-        <img onClick={() => setMenu(!menu)} className='burger' src={burger} alt='burger' />
+        <img
+          onClick={() => setMenu(!menu)}
+          className='burger'
+          src={burger}
+          alt='Toggle Menu'
+          aria-expanded={menu}
+          aria-controls="mobile-menu"
+        />
       </nav>
       {menu && (
-        <div className='mobilemenu'>
-          <ul>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+        <div className='mobilemenu' id="mobile-menu" aria-label="Mobile Navigation">
+          <ul className='nav-list'>
+            <li>
+              <NavLink to="/portfolio" onClick={() => setMenu(false)}>
+                Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={() => setMenu(false)}>
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={() => setMenu(false)}>
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
       )}

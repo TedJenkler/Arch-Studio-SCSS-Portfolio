@@ -1,8 +1,7 @@
-import React from 'react'
-import Project from './Project'
+import React from 'react';
+import Project from './Project';
 
 function PortfolioContainer() {
-
   const portfolio = [
     { name: "Seraph Station", img: "portfolio1.png", imgmd: "portfolio1md.png", imgxl: "portfolio1xl.png", year: "2019", month: "September" },
     { name: "Eebox Building", img: "portfolio2.png", imgmd: "portfolio2md.png", imgxl: "portfolio2xl.png", year: "2017", month: "August" },
@@ -16,10 +15,10 @@ function PortfolioContainer() {
     { name: "SXIV Tower", img: "portfolio10.png", imgmd: "portfolio10md.png", imgxl: "portfolio10xl.png", year: "2011", month: "March" },
     { name: "Trinity Bank Tower", img: "portfolio11.png", imgmd: "portfolio11md.png", imgxl: "portfolio11xl.png", year: "2010", month: "September" },
     { name: "Project Paramour", img: "portfolio12.png", imgmd: "portfolio12md.png", imgxl: "portfolio12xl.png", year: "2008", month: "February" },
-  ]
+  ];
 
   return (
-    <section className='portfolio-container'>
+    <section className='portfolio-container' aria-label='Portfolio Projects'>
       {portfolio.map((project, index) => (
         <Project 
           key={index} 
@@ -32,7 +31,7 @@ function PortfolioContainer() {
         />
       ))}
     </section>
-  )
+  );
 }
 
-export default PortfolioContainer
+export default PortfolioContainer;

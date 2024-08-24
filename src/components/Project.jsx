@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 function Project({ img, imgmd, imgxl, name, year, month }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -24,11 +23,11 @@ function Project({ img, imgmd, imgxl, name, year, month }) {
   ).href;
 
   return (
-    <div className='portfolio' style={{ backgroundImage: `url(${imageUrl})` }}>
-      <div className='overlay'></div>
+    <article className='portfolio' style={{ backgroundImage: `url(${imageUrl})` }} aria-label={`Project ${name} from ${month} ${year}`}>
+      <div className='overlay' aria-hidden="true"></div>
       <h2>{name}</h2>
       <p>{month} {year}</p>
-    </div>
+    </article>
   );
 }
 

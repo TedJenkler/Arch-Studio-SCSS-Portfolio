@@ -4,23 +4,23 @@ import LeafletMap from './LeafletMap';
 
 function ContactSection() {
   return (
-    <section className='contact-section'>
+    <section className='contact-section' aria-labelledby='contact-section-heading'>
       <div className='section-design'></div>
-        
+      
       <div className='contact-details-wrapper'>
-        <h2>Contact Details</h2>
+        <h2 id='contact-section-heading'>Contact Details</h2>
         
         <div className='office-info'>
           <h3>Main Office</h3>
           <div className='office-details'>
             <div className='contact-info'>
-              <p>Mail: archone@mail.com</p>
+              <p>Email: <a href="mailto:archone@mail.com">archone@mail.com</a></p>
               <p>Address: 1892 Chenoweth Drive TN</p>
-              <p>Phone: 123-456-3451</p>
+              <p>Phone: <a href="tel:123-456-3451">123-456-3451</a></p>
             </div>
-            <button className='map-button'>
+            <button className='map-button' aria-label='View Main Office on Map'>
               <p>View on Map</p>
-              <img src={arrow} alt='View on map arrow' />
+              <img src={arrow} alt='Arrow icon pointing to the right' />
             </button>
           </div>
         </div>
@@ -29,13 +29,13 @@ function ContactSection() {
           <h3>Office II</h3>
           <div className='office-details'>
             <div className='contact-info'>
-              <p>Mail: archtwo@mail.com</p>
+              <p>Email: <a href="mailto:archtwo@mail.com">archtwo@mail.com</a></p>
               <p>Address: 3399 Wines Lane TX</p>
-              <p>Phone: 832-123-4321</p>
+              <p>Phone: <a href="tel:832-123-4321">832-123-4321</a></p>
             </div>
-            <button className='map-button'>
+            <button className='map-button' aria-label='View Office II on Map'>
               <p>View on Map</p>
-              <img src={arrow} alt='View on map arrow' />
+              <img src={arrow} alt='Arrow icon pointing to the right' />
             </button>
           </div>
         </div>

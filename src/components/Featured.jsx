@@ -12,28 +12,28 @@ function Featured() {
   ];
 
   return (
-    <section className='featured'>
+    <section className='featured' aria-labelledby='featured-heading'>
       <div className='featured-header'>
-        <h2>Featured</h2>
+        <h2 id='featured-heading'>Featured</h2>
         <Link to="/portfolio" className='md-btn'>
           <p>See All</p>
-          <img src={arrow} alt='arrow'/>
+          <img src={arrow} alt='Arrow icon pointing to the right' />
         </Link>
       </div>
       <div className='project-container'>
-      {projects.map((project, index) => (
-        <ProjectLink 
-          key={index} 
-          name={project.name} 
-          img={project.img} 
-          imgMd={project.imgMd}
-          imgXl={project.imgXl}
-        />
-      ))}
+        {projects.map((project, index) => (
+          <ProjectLink 
+            key={index} 
+            name={project.name} 
+            img={project.img} 
+            imgMd={project.imgMd}
+            imgXl={project.imgXl}
+          />
+        ))}
       </div>
       <Link to="/portfolio" className='sm-btn'>
         <p>See All</p>
-        <img src={arrow} alt='arrow'/>
+        <img src={arrow} alt='Arrow icon pointing to the right' />
       </Link>
     </section>
   );

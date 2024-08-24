@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import arrow from '../assets/images/arrow.svg';
 import { Link } from 'react-router-dom';
+import arrow from '../assets/images/arrow.svg';
 import bg1 from '../assets/images/herobgdesktop.png';
 import bg2 from '../assets/images/bg2.png';
 import bg3 from '../assets/images/bg3.png';
@@ -17,18 +17,46 @@ function Hero() {
   ];
 
   return (
-    <section className='hero' style={{ backgroundImage: `url(${data[project].bg})` }}>
+    <section 
+      className='hero' 
+      style={{ backgroundImage: `url(${data[project].bg})` }}
+      aria-label={`${data[project].h1} project details`}
+    >
       <h1>{data[project].h1}</h1>
       <p>{data[project].p}</p>
       <Link to="/portfolio">
         <p>See Our Portfolio</p>
         <img src={arrow} alt='arrow' />
       </Link>
-      <div className='slider'>
-        <a onClick={() => setProject(0)} id={project === 0 ? 'selected' : ''}><span>01</span></a>
-        <a onClick={() => setProject(1)} id={project === 1 ? 'selected' : ''}><span>02</span></a>
-        <a onClick={() => setProject(2)} id={project === 2 ? 'selected' : ''}><span>03</span></a>
-        <a onClick={() => setProject(3)} id={project === 3 ? 'selected' : ''}><span>04</span></a>
+      <div className='slider' aria-label="Project navigation">
+        <a 
+          onClick={() => setProject(0)} 
+          id={project === 0 ? 'selected' : ''} 
+          aria-current={project === 0 ? 'true' : 'false'}
+        >
+          <span>01</span>
+        </a>
+        <a 
+          onClick={() => setProject(1)} 
+          id={project === 1 ? 'selected' : ''} 
+          aria-current={project === 1 ? 'true' : 'false'}
+        >
+          <span>02</span>
+        </a>
+        <a 
+          onClick={() => setProject(2)} 
+          id={project === 2 ? 'selected' : ''} 
+          aria-current={project === 2 ? 'true' : 'false'}
+        >
+          <span>03</span>
+        </a>
+        <a 
+          onClick={() => setProject(3)} 
+          id={project === 3 ? 'selected' : ''} 
+          aria-current={project === 3 ? 'true' : 'false'}
+        >
+          <span>04</span>
+        </a>
       </div>
     </section>
   );

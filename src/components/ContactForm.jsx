@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import arrow from '../assets/images/arrow.svg';
-import FormInput from './FormInput'; // Adjust the import path as necessary
+import FormInput from './FormInput';
 
 function ContactForm() {
   const initialValues = {
@@ -27,14 +27,14 @@ function ContactForm() {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      <Form className='contact-form'>
-        <h2>Connect with us</h2>
+      <Form className='contact-form' aria-labelledby='contact-form-heading'>
+        <h2 id='contact-form-heading'>Connect with us</h2>
         <div className='form-fields'>
           <FormInput name="name" type="text" placeholder="Name" />
           <FormInput name="email" type="email" placeholder="Email" />
           <FormInput name="message" as="textarea" placeholder="Message" />
-          <button type='submit' className='submit-button'>
-            <img src={arrow} alt='arrow' />
+          <button type='submit' className='submit-button' aria-label='Submit contact form'>
+            <img src={arrow} alt='Submit arrow' />
           </button>
         </div>
       </Form>

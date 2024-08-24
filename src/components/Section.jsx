@@ -15,7 +15,7 @@ function Section() {
           <p>We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony the surrounding area to create truly stunning projects that will stand the test of time.</p>
         </div>
         <div className='img-container'>
-          <img src={sectionimg} alt='section img' />
+          <img src={sectionimg} alt='Architects working on a building model' className='section-img' />
         </div>
     </section>
   )

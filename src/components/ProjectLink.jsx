@@ -28,10 +28,11 @@ function ProjectLink({ name, img, imgXl, imgMd, index }) {
       key={index}
       className='project' 
       style={{ backgroundImage: `url(${imageUrl})` }}
+      aria-label={`Project link to ${name}`}
     >
-      <div className='bgfilter'></div>
+      <div className='bgfilter' aria-hidden="true"></div>
       <h3>{name}</h3>
-      <a>View All Projects</a>
+      <a aria-label="View all projects">View All Projects</a>
     </div>
   );
 }
