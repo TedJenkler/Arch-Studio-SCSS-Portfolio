@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import arrow from '../assets/images/arrow.svg';
+import { Link } from 'react-router-dom';
 import bg1 from '../assets/images/herobgdesktop.png';
 import bg2 from '../assets/images/bg2.png';
 import bg3 from '../assets/images/bg3.png';
@@ -17,46 +18,40 @@ function Hero() {
   ];
 
   return (
-    <section 
-      className='hero' 
-      style={{ backgroundImage: `url(${data[project].bg})` }}
-      aria-label={`${data[project].h1} project details`}
-    >
-      <h1>{data[project].h1}</h1>
-      <p>{data[project].p}</p>
-      <Link to="/portfolio">
-        <p>See Our Portfolio</p>
-        <img src={arrow} alt='arrow' />
-      </Link>
-      <div className='slider' aria-label="Project navigation">
-        <a 
-          onClick={() => setProject(0)} 
-          id={project === 0 ? 'selected' : ''} 
-          aria-current={project === 0 ? 'true' : 'false'}
+    <section className='hero' style={{ backgroundImage: `url(${data[project].bg})` }}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={project}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
         >
-          <span>01</span>
-        </a>
-        <a 
-          onClick={() => setProject(1)} 
-          id={project === 1 ? 'selected' : ''} 
-          aria-current={project === 1 ? 'true' : 'false'}
-        >
-          <span>02</span>
-        </a>
-        <a 
-          onClick={() => setProject(2)} 
-          id={project === 2 ? 'selected' : ''} 
-          aria-current={project === 2 ? 'true' : 'false'}
-        >
-          <span>03</span>
-        </a>
-        <a 
-          onClick={() => setProject(3)} 
-          id={project === 3 ? 'selected' : ''} 
-          aria-current={project === 3 ? 'true' : 'false'}
-        >
-          <span>04</span>
-        </a>
+          <h1>{data[project].h1}</h1>
+          <p>{data[project].p}</p>
+          <Link to="/portfolio">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              See Our Portfolio
+            </motion.p>
+            <motion.img
+              src={arrow}
+              alt='arrow'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            />
+          </Link>
+        </motion.div>
+      </AnimatePresence>
+      <div className='slider'>
+        <a onClick={() => setProject(0)} id={project === 0 ? 'selected' : ''}><span>01</span></a>
+        <a onClick={() => setProject(1)} id={project === 1 ? 'selected' : ''}><span>02</span></a>
+        <a onClick={() => setProject(2)} id={project === 2 ? 'selected' : ''}><span>03</span></a>
+        <a onClick={() => setProject(3)} id={project === 3 ? 'selected' : ''}><span>04</span></a>
       </div>
     </section>
   );
